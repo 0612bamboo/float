@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+     li{
+        list-style: none;
+        float:left;
+        margin-left:30px;
+    }
+  .youfu{
+      float:right;
+  }
+  /* 直接li右浮动，顺序会颠倒，需要用上层父元素将其包裹起来，再右浮动 */
+  .zuofu{
+      background-color: pink;
+      border: 1px solid;
+      /* 浮动的坏处脱离了文档流，其父元素和其他元素没有办法看见它。
+      坏处1对后续的元素的位置有影响，2对其父元素的高度有影响，没有办法撑开父元素 */
+  }
+    </style>
+</head>
+<body>
+    <ul class="zuofu">
+        <li><a href="#">知乎</a></li>
+        <li><a href="#">豆瓣</a></li>
+        <li><a href="#">果壳</a></li>
+        <li><a href="#">kownyouself</a></li>
+    </ul>
+
+    <ul class="youfu">
+        <li><a href="#">知乎</a></li>
+        <li><a href="#">豆瓣</a></li>
+        <li><a href="#">果壳</a></li>
+        <li><a href="#">kownyouself</a></li>
+    </ul>
+</body>
+</html>

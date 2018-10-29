@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box1,.box2,.box3{
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+        }
+        .box2{
+         position:relative;
+         top: 10px;
+         bottom:30px;
+         right: 20px;
+          background-color:red;
+           z-index:-3; 
+           /* 谁的z-index值大谁就在上方 */
+        }
+        .box3{
+            top:30px;
+            left:20px;
+            position: absolute;
+         background-color:yellow;
+          z-index:8;
+          /* 相对于定位点的元素从上向下偏移30，从右到左偏移20px。而单纯的从左上角偏移。
+定位对象是从它的父元素找其有relative/fix/absolute。如果没有就继续往上找直到body和html */
+        }
+        body{
+            border:1px solid;
+           position: relative;
+        }
+      html{
+         border:1px solid red;
+      }
+      .all{
+        position:relative;
+      }
+      
+    </style>
+</head>
+<body class="all">
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+    <div class="box1">4</div>
+</body>
+</html>

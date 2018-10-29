@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+   .all{
+         width: 300px;
+        height:300px;  
+        border: 1px solid black;
+   }
+    .box{
+        width: 100px;
+        height:130px;
+        
+    }
+    .box1{
+        background-color: blue;
+        float: left;
+    }
+    .box2{
+        background-color: red;
+        float: left;
+    }
+    .box3{
+        background-color: green;
+        width: 300px;
+        height:150px;
+      /* 实际绿色box的开始位置为p标签的下一行开始。实体看不到浮动元素，就被蓝色的浮动元素遮盖了，绿box的文本能识别蓝色和红色的浮动框。里面的文字是从红色的浮动框边缘开始的  */
+      
+    }
+    span{
+        width: 100px;
+        height: 30px;
+    }
+    /* 
+1、浮动元素脱离了普通文档流，文档的普通流中的元素表现的就像浮动元素不存在一样，但文本可以看见浮动元素。
+2、设置浮动后行内元素拥有一些块级元素的特性，可以设置宽高margin。
+ 块级元素有了行内元素的特性，不再占据一整行，宽度决定于自身内容。
+ 浮动元素不会将父容器撑开，
+ 浮动元素左右浮动时遇到其他浮动元素会停止
+ 普通流中的普通元素看不见浮动元素，但文本可以看见浮动元素 */
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="box box1">1</div>
+        <p>啊啊啊啊啊啊啊啊啊fffffff
+          ffffffffffffffff
+          ffffffffffffffffffffff
+          fffffff</p>
+        <div class="box box2">22222222222222</div>
+      <div class="box box3">
+      <哈哈哈哈哈哈哈啊哈哈哈啊</p>
+      </div>
+        <span>啦啦啦</span>
+    </div>
+</body>
+</html>

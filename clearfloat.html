@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+  
+
+  .zuofu>li{
+     
+      float:left;
+     margin-left:30px;}
+    
+ .zuofu{
+        list-style: none;
+        background-color: pink;
+      border: 1px solid;
+     }
+  /* .clearfix::after{
+      content:"";
+      clear:both;
+      display:block;
+
+  }
+  清除浮动方法一：通过伪元素将浮动元素撑开 */
+ 
+ .zuofu .clearfix2{
+       float:none;
+       /* 清除浮动样式 */
+       clear:left;
+ /* 清除浮动的方法2：通过添加一个块级元素将父元素撑开       */
+
+}
+    </style>
+</head>
+<body>
+    <ul class="zuofu ">
+        <li><a href="#">知乎</a></li>
+        <li><a href="#">豆瓣</a></li>
+        <li><a href="#">果壳</a></li>
+        <li><a href="#">kownyouself</a></li>
+        <li class="clearfix2"></li>
+    </ul>
+
+   
+</body>
+</html>
